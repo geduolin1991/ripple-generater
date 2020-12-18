@@ -1,0 +1,1311 @@
+set cut_paste_input [stack 0]
+version 12.1 v2
+Group {
+ inputs 0
+ name Ripple_Generator
+ selected true
+ xpos 35
+ ypos -113
+ addUserKnob {20 User}
+ addUserKnob {20 SingleRingCtrl n 1}
+ addUserKnob {41 speed T Wave_Ctrl.speed}
+ addUserKnob {41 speedGrowth -STARTLINE T Wave_Ctrl.speedGrowth}
+ addUserKnob {41 thickness T Wave_Ctrl.thickness}
+ addUserKnob {41 thicknessGrowth -STARTLINE T Wave_Ctrl.thicknessGrowth}
+ addUserKnob {41 Falloff l "Opacity decay" T Wave_Ctrl.Falloff}
+ addUserKnob {20 endGroup n -1}
+ addUserKnob {26 ""}
+ addUserKnob {20 Repeat n 1}
+ addUserKnob {41 Repetition T Wave_Ctrl.Repetition}
+ addUserKnob {41 InBetweenFrames T Wave_Ctrl.InBetweenFrames}
+ addUserKnob {20 endGroup_1 l endGroup n -1}
+ addUserKnob {26 ""}
+ addUserKnob {26 _1 l "" +STARTLINE T "By han cao\nHancaofx@gmail.com"}
+}
+ BackdropNode {
+  inputs 0
+  name BackdropNode1
+  tile_color 0x71c67100
+  label "2k circle \n2048*2048"
+  note_font_size 42
+  xpos -506
+  ypos -330
+  bdwidth 426
+  bdheight 274
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode2
+  tile_color 0x8e8e3800
+  label "Opacity Decay"
+  note_font_size 42
+  xpos 311
+  ypos 2539
+  bdwidth 306
+  bdheight 205
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode5
+  tile_color 0x8e388e00
+  label "Single ring"
+  note_font_size 42
+  xpos -502
+  ypos -29
+  bdwidth 430
+  bdheight 307
+ }
+ Reformat {
+  inputs 0
+  format "2048 2048 0 0 2048 2048 1 square_2K"
+  name Reformat15
+  xpos 321
+  ypos 2619
+ }
+ Radial {
+  area {0 0 2048 2048}
+  name Radial1
+  xpos 321
+  ypos 2653
+ }
+ Invert {
+  name Invert10
+  xpos 321
+  ypos 2677
+ }
+ Reformat {
+  inputs 0
+  format "2048 2048 0 0 2048 2048 1 square_2K"
+  name Reformat14
+  xpos -291
+  ypos -178
+ }
+ Roto {
+  output alpha
+  cliptype none
+  curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097152}
+    {t x44700000 x44070000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Ellipse1 512 bezier
+     {{cc
+       {f 8192}
+       {px x42a40000
+        {xc40c8e74 0}
+        {x447f72ab x40d80002}
+        {x440c8e74 0}
+        {0 xc40c8e74}
+        {x44fef956 x44801800}
+        {0 x440c8e74}
+        {x440c8e74 0}
+        {x447f72ab x44ff5800}
+        {xc40c8e74 0}
+        {0 x440c8e74}
+        {x4072ab00 x44801800}
+        {0 xc40c8e74}}}
+      {cc
+       {f 8192}
+       {px x42a40000
+        {xc40c8e74 0}
+        {0 0}
+        {x440c8e74 0}
+        {0 xc40c8e74}
+        {0 0}
+        {0 x440c8e74}
+        {x440c8e74 0}
+        {0 0}
+        {xc40c8e74 0}
+        {0 x440c8e74}
+        {0 0}
+        {0 xc40c8e74}}}}
+     {tx x42a40000 x447f8000 x44804000}
+     {a osw x41200000 osf 0 str 1 spx x44700000 spy x44070000 sb 1 ltn x42a40000 ltm x42a40000 tt x40e00000}}}}}}
+  toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 tt 7 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+  toolbar_brush_hardness 0.200000003
+  toolbar_source_transform_scale {1 1}
+  toolbar_source_transform_center {960 540}
+  colorOverlay {0 0 0 0}
+  lifetime_type "all frames"
+  lifetime_start 82
+  lifetime_end 82
+  motionblur_shutter_offset_type centred
+  source_black_outside true
+  name Roto30
+  xpos -291
+  ypos -132
+ }
+ Transform {
+  translate {2.4 -0.8}
+  scale 1.0049
+  center {1024 1024}
+  black_outside false
+  name Transform24
+  xpos -291
+  ypos -98
+ }
+ Dot {
+  name Dot131
+  xpos -257
+  ypos 24
+ }
+ Dot {
+  name Dot127
+  xpos -257
+  ypos 42
+ }
+set N5f0fc00 [stack 0]
+ Dot {
+  name Dot128
+  xpos -367
+  ypos 42
+ }
+ Transform {
+  scale {{((frame/100*Wave_Ctrl.speed-Wave_Ctrl.thickness/2048)>0)*(frame/100*Wave_Ctrl.speed-Wave_Ctrl.thickness/2048)*(1-Wave_Ctrl.thicknessGrowth/2048) x1 0 l x20 1}}
+  center {1024 1024}
+  name Transform26
+  xpos -401
+  ypos 78
+ }
+ Dot {
+  name Dot1
+  xpos -367
+  ypos 112
+ }
+push $N5f0fc00
+ Transform {
+  scale {{((frame/100*Wave_Ctrl.speed+Wave_Ctrl.thickness/2048)>0)*(frame/100*Wave_Ctrl.speed+Wave_Ctrl.thickness/2048)*(1+Wave_Ctrl.thicknessGrowth/2048) x1 0 l x20 1}}
+  center {1024 1024}
+  name Transform25
+  xpos -291
+  ypos 60
+ }
+ Merge2 {
+  inputs 2
+  operation stencil
+  name Stencil9
+  xpos -291
+  ypos 109
+ }
+ Transform {
+  scale {{1+frame/100*Wave_Ctrl.speedGrowth}}
+  center {1024 1024}
+  name Transform1
+  xpos -291
+  ypos 133
+ }
+ Transform {
+  scale {{1+frame/100*Wave_Ctrl.speedGrowth}}
+  center {1024 1024}
+  name Transform2
+  xpos -291
+  ypos 157
+ }
+ Crop {
+  box {0 0 2048 2048}
+  name Crop9
+  xpos -291
+  ypos 181
+ }
+ Shuffle {
+  red alpha
+  green alpha
+  blue alpha
+  name FloodAlpha
+  tile_color 0x80807fff
+  label "\[value in]"
+  xpos -291
+  ypos 205
+ }
+ FrameRange {
+  last_frame 300
+  time ""
+  name FrameRange3
+  xpos -291
+  ypos 239
+ }
+ Dot {
+  name Dot3
+  xpos -257
+  ypos 376
+ }
+set N5f3f400 [stack 0]
+ TimeOffset {
+  time_offset {{Wave_Ctrl.InBetweenFrames}}
+  time ""
+  name TimeOffset28
+  xpos -291
+  ypos 410
+ }
+ set C3562d600 [stack 0]
+ Dot {
+  name Dot2
+  xpos -257
+  ypos 434
+ }
+set N5f3f000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 456
+  selected false
+ }
+ Dot {
+  name Dot133
+  xpos -257
+  ypos 480
+ }
+set N5f3ec00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 498
+  selected false
+ }
+ Dot {
+  name Dot134
+  xpos -257
+  ypos 522
+ }
+set N5f3e800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 540
+  selected false
+ }
+ Dot {
+  name Dot135
+  xpos -257
+  ypos 564
+ }
+set N5f3e400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 582
+  selected false
+ }
+ Dot {
+  name Dot136
+  xpos -257
+  ypos 606
+ }
+set N5f3e000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 624
+  selected false
+ }
+ Dot {
+  name Dot137
+  xpos -257
+  ypos 648
+ }
+set N5f7bc00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 666
+  selected false
+ }
+ Dot {
+  name Dot139
+  xpos -257
+  ypos 690
+ }
+set N5f7b800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 708
+  selected false
+ }
+ Dot {
+  name Dot140
+  xpos -257
+  ypos 732
+ }
+set N5f7b400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 750
+  selected false
+ }
+ Dot {
+  name Dot141
+  xpos -257
+  ypos 774
+ }
+set N5f7b000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 792
+  selected false
+ }
+ Dot {
+  name Dot142
+  xpos -257
+  ypos 816
+ }
+set N5f7ac00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 834
+  selected false
+ }
+ Dot {
+  name Dot138
+  xpos -257
+  ypos 858
+ }
+set N5f7a800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 876
+  selected false
+ }
+ Dot {
+  name Dot143
+  xpos -257
+  ypos 900
+ }
+set N5f7a400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 918
+  selected false
+ }
+ Dot {
+  name Dot144
+  xpos -257
+  ypos 942
+ }
+set N5f7a000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 960
+  selected false
+ }
+ Dot {
+  name Dot145
+  xpos -257
+  ypos 984
+ }
+set N5fb9c00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1002
+  selected false
+ }
+ Dot {
+  name Dot146
+  xpos -257
+  ypos 1026
+ }
+set N5fb9800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1044
+  selected false
+ }
+ Dot {
+  name Dot148
+  xpos -257
+  ypos 1068
+ }
+set N5fb9400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1086
+  selected false
+ }
+ Dot {
+  name Dot149
+  xpos -257
+  ypos 1110
+ }
+set N5fb9000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1128
+  selected false
+ }
+ Dot {
+  name Dot150
+  xpos -257
+  ypos 1152
+ }
+set N5fb8c00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1170
+  selected false
+ }
+ Dot {
+  name Dot151
+  xpos -257
+  ypos 1194
+ }
+set N5fb8800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1212
+  selected false
+ }
+ Dot {
+  name Dot152
+  xpos -257
+  ypos 1236
+ }
+set N5fb8400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1254
+  selected false
+ }
+ Dot {
+  name Dot153
+  xpos -257
+  ypos 1278
+ }
+set N5fb8000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1296
+  selected false
+ }
+ Dot {
+  name Dot154
+  xpos -257
+  ypos 1320
+ }
+set N5ff7c00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1338
+  selected false
+ }
+ Dot {
+  name Dot155
+  xpos -257
+  ypos 1362
+ }
+set N5ff7800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1380
+  selected false
+ }
+ Dot {
+  name Dot156
+  xpos -257
+  ypos 1404
+ }
+set N5ff7400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1422
+  selected false
+ }
+ Dot {
+  name Dot157
+  xpos -257
+  ypos 1446
+ }
+set N5ff7000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1464
+  selected false
+ }
+ Dot {
+  name Dot158
+  xpos -257
+  ypos 1488
+ }
+set N5ff6c00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1506
+  selected false
+ }
+ Dot {
+  name Dot159
+  xpos -257
+  ypos 1530
+ }
+set N5ff6800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1548
+  selected false
+ }
+ Dot {
+  name Dot160
+  xpos -257
+  ypos 1572
+ }
+set N5ff6400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1590
+  selected false
+ }
+ Dot {
+  name Dot161
+  xpos -257
+  ypos 1614
+ }
+set N5ff6000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1632
+  selected false
+ }
+ Dot {
+  name Dot162
+  xpos -257
+  ypos 1656
+ }
+set N6037c00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1674
+  selected false
+ }
+ Dot {
+  name Dot163
+  xpos -257
+  ypos 1698
+ }
+set N6037800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1716
+  selected false
+ }
+ Dot {
+  name Dot164
+  xpos -257
+  ypos 1740
+ }
+set N6037400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1758
+  selected false
+ }
+ Dot {
+  name Dot165
+  xpos -257
+  ypos 1782
+ }
+set N6037000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1800
+  selected false
+ }
+ Dot {
+  name Dot166
+  xpos -257
+  ypos 1824
+ }
+set N6036c00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1842
+  selected false
+ }
+ Dot {
+  name Dot168
+  xpos -257
+  ypos 1866
+ }
+set N6036800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1884
+  selected false
+ }
+ Dot {
+  name Dot169
+  xpos -257
+  ypos 1908
+ }
+set N6036400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1926
+  selected false
+ }
+ Dot {
+  name Dot170
+  xpos -257
+  ypos 1950
+ }
+set N6036000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 1968
+  selected false
+ }
+ Dot {
+  name Dot171
+  xpos -257
+  ypos 1992
+ }
+set N6077c00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 2010
+  selected false
+ }
+ Dot {
+  name Dot172
+  xpos -257
+  ypos 2034
+ }
+set N6077800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 2052
+  selected false
+ }
+ Dot {
+  name Dot173
+  xpos -257
+  ypos 2076
+ }
+set N6077400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 2094
+  selected false
+ }
+ Dot {
+  name Dot174
+  xpos -257
+  ypos 2118
+ }
+set N6077000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 2136
+  selected false
+ }
+ Dot {
+  name Dot175
+  xpos -257
+  ypos 2160
+ }
+set N6076c00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 2178
+  selected false
+ }
+ Dot {
+  name Dot176
+  xpos -257
+  ypos 2202
+ }
+set N6076800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 2220
+  selected false
+ }
+ Dot {
+  name Dot177
+  xpos -257
+  ypos 2244
+ }
+set N6076400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 2262
+  selected false
+ }
+ Dot {
+  name Dot178
+  xpos -257
+  ypos 2286
+ }
+set N6076000 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 2304
+  selected false
+ }
+ Dot {
+  name Dot179
+  xpos -257
+  ypos 2328
+ }
+set N60b7c00 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 2346
+  selected false
+ }
+ Dot {
+  name Dot180
+  xpos -257
+  ypos 2370
+ }
+set N60b7800 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 2388
+  selected false
+ }
+ Dot {
+  name Dot181
+  xpos -257
+  ypos 2412
+ }
+set N60b7400 [stack 0]
+clone $C3562d600 {
+  xpos -291
+  ypos 2430
+  selected false
+ }
+ Dot {
+  name Dot182
+  xpos -257
+  ypos 2454
+ }
+push $N60b7400
+push $N60b7800
+push $N60b7c00
+push $N6076000
+push $N6076400
+push $N6076800
+push $N6076c00
+push $N6077000
+push $N6077400
+push $N6077800
+push $N6077c00
+push $N6036000
+push $N6036400
+push $N6036800
+push $N6036c00
+push $N6037000
+push $N6037400
+push $N6037800
+push $N6037c00
+push $N5ff6000
+push $N5ff6400
+push $N5ff6800
+push $N5ff6c00
+push $N5ff7000
+push $N5ff7400
+push $N5ff7800
+push $N5ff7c00
+push $N5fb8000
+push $N5fb8400
+push $N5fb8800
+push $N5fb8c00
+push $N5fb9000
+push $N5fb9400
+push $N5fb9800
+push $N5fb9c00
+push $N5f7a000
+push $N5f7a400
+push $N5f7a800
+push $N5f7ac00
+push $N5f7b000
+push $N5f7b400
+push $N5f7b800
+push $N5f7bc00
+push $N5f3e000
+push $N5f3e400
+push $N5f3e800
+push $N5f3ec00
+push $N5f3f000
+push $N5f3f400
+ Dot {
+  name Dot129
+  xpos -97
+  ypos 376
+ }
+set N60b6c00 [stack 0]
+ Merge2 {
+  inputs 2
+  name Merge30
+  xpos -131
+  ypos 432
+ }
+ set C60b6800 [stack 0]
+set N60b6800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 477
+  selected false
+ }
+set N60b6400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 519
+  selected false
+ }
+set N60b6000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 561
+  selected false
+ }
+set N60e9c00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 603
+  selected false
+ }
+set N60e9800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 645
+  selected false
+ }
+set N60e9400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 687
+  selected false
+ }
+set N60e9000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 729
+  selected false
+ }
+set N60e8c00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 771
+  selected false
+ }
+set N60e8800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 813
+  selected false
+ }
+set N60e8400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 855
+  selected false
+ }
+set N60e8000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 897
+  selected false
+ }
+set N612bc00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 939
+  selected false
+ }
+set N612b800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 981
+  selected false
+ }
+set N612b400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1023
+  selected false
+ }
+set N612b000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1065
+  selected false
+ }
+set N612ac00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1107
+  selected false
+ }
+set N612a800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1149
+  selected false
+ }
+set N612a400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1191
+  selected false
+ }
+set N612a000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1233
+  selected false
+ }
+set N616bc00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1275
+  selected false
+ }
+set N616b800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1317
+  selected false
+ }
+set N616b400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1359
+  selected false
+ }
+set N616b000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1401
+  selected false
+ }
+set N616ac00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1443
+  selected false
+ }
+set N616a800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1485
+  selected false
+ }
+set N616a400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1527
+  selected false
+ }
+set N616a000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1569
+  selected false
+ }
+set N61a9c00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1611
+  selected false
+ }
+set N61a9800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1653
+  selected false
+ }
+set N61a9400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1695
+  selected false
+ }
+set N61a9000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1737
+  selected false
+ }
+set N61a8c00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1779
+  selected false
+ }
+set N61a8800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1821
+  selected false
+ }
+set N61a8400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1863
+  selected false
+ }
+set N61a8000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1905
+  selected false
+ }
+set N61e9c00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1947
+  selected false
+ }
+set N61e9800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 1989
+  selected false
+ }
+set N61e9400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 2031
+  selected false
+ }
+set N61e9000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 2073
+  selected false
+ }
+set N61e8c00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 2115
+  selected false
+ }
+set N61e8800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 2157
+  selected false
+ }
+set N61e8400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 2199
+  selected false
+ }
+set N61e8000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 2241
+  selected false
+ }
+set N6225c00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 2283
+  selected false
+ }
+set N6225800 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 2325
+  selected false
+ }
+set N6225400 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 2367
+  selected false
+ }
+set N6225000 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 2409
+  selected false
+ }
+set N6224c00 [stack 0]
+clone $C60b6800 {
+  inputs 2
+  xpos -131
+  ypos 2451
+  selected false
+ }
+push $N6224c00
+push $N6225000
+push $N6225400
+push $N6225800
+push $N6225c00
+push $N61e8000
+push $N61e8400
+push $N61e8800
+push $N61e8c00
+push $N61e9000
+push $N61e9400
+push $N61e9800
+push $N61e9c00
+push $N61a8000
+push $N61a8400
+push $N61a8800
+push $N61a8c00
+push $N61a9000
+push $N61a9400
+push $N61a9800
+push $N61a9c00
+push $N616a000
+push $N616a400
+push $N616a800
+push $N616ac00
+push $N616b000
+push $N616b400
+push $N616b800
+push $N616bc00
+push $N612a000
+push $N612a400
+push $N612a800
+push $N612ac00
+push $N612b000
+push $N612b400
+push $N612b800
+push $N612bc00
+push $N60e8000
+push $N60e8400
+push $N60e8800
+push $N60e8c00
+push $N60e9000
+push $N60e9400
+push $N60e9800
+push $N60e9c00
+push $N60b6000
+push $N60b6400
+push $N60b6800
+push $N60b6c00
+ Reformat {
+  inputs 0
+  format "2048 2048 0 0 2048 2048 1 square_2K"
+  name Reformat16
+  xpos 553
+  ypos 2360
+ }
+ Dot {
+  name Dot167
+  xpos 587
+  ypos 2454
+ }
+ Switch {
+  inputs 51
+  which {{Wave_Ctrl.Repetition}}
+  name Switch2
+  xpos 446
+  ypos 2451
+ }
+ ColorCorrect {
+  inputs 1+1
+  gain 0
+  mix {{Wave_Ctrl.Falloff}}
+  name ColorCorrect33
+  xpos 446
+  ypos 2682
+ }
+ Shuffle {
+  green red
+  blue red
+  alpha red
+  name FloodRed1
+  tile_color 0x521111ff
+  label "\[value in]"
+  xpos 446
+  ypos 2778
+ }
+ Crop {
+  box {0 0 2048 2048}
+  name Crop1
+  xpos 446
+  ypos 2812
+ }
+ Output {
+  name Output1
+  xpos 446
+  ypos 2840
+ }
+ NoOp {
+  inputs 0
+  name Wave_Ctrl
+  note_font_size 100
+  xpos -710
+  ypos 32
+  addUserKnob {20 User}
+  addUserKnob {20 SingleRingCtrl n 1}
+  addUserKnob {7 speed R 0 20}
+  speed 3
+  addUserKnob {7 speedGrowth R 0 10}
+  addUserKnob {7 thickness R 0 300}
+  thickness 10
+  addUserKnob {7 thicknessGrowth R 0 100}
+  thicknessGrowth 20
+  addUserKnob {7 Falloff l "Opacity decay"}
+  addUserKnob {20 endGroup n -1}
+  addUserKnob {26 ""}
+  addUserKnob {3 Repetition}
+  Repetition 4
+  addUserKnob {3 InBetweenFrames}
+  InBetweenFrames 4
+ }
+end_group
